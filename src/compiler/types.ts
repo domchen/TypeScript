@@ -3285,7 +3285,7 @@ namespace ts {
     export interface ResolvedModule {
         /** TypeScript (.d.ts, .ts, .tsx) file that the module was resolved to. This will be preferred over a JS file. */
         resolvedTsFileName: string | undefined;
-        /** JavaScript file that the module was resolved to. This should be returned even if '--allowJs' is disabled. */
+        /** JavaScript (or .jsx) file that the module was resolved to. This should be returned even if '--allowJs' (or '--jsx') is disabled. */
         resolvedJsFileName: string | undefined;
         /**
          * Denotes if 'resolvedFileName' is isExternalLibraryImport and thus should be a proper external module:

@@ -80,6 +80,7 @@ namespace ts {
     }
 
     /** LsHost uses a global cache of automatically-installed typings to help it resolve modules. */
+    /* @internal */
     export function resolveModuleNameForLsHost(moduleName: string, containingFile: string, compilerOptions: CompilerOptions, host: ModuleResolutionHost, globalCache: string | undefined, projectName: string): ResolvedModuleWithFailedLookupLocations {
         const primaryResult = resolveModuleName(moduleName, containingFile, compilerOptions, host);
         if (primaryResult.resolvedModule && primaryResult.resolvedModule.resolvedTsFileName) {
